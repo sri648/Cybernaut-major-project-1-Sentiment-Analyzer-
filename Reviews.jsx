@@ -1,0 +1,2 @@
+import ReviewCard from '../components/ReviewCard'
+export default function Reviews({ reviews }) { return <main className="page"><div className="page-head"><div><p className="eyebrow">THE VOICE OF THE CUSTOMER</p><h2>Review library</h2></div><span className="status">{reviews.length} reviews</span></div><div className="review-grid">{reviews.length ? reviews.map((review, i) => <ReviewCard key={`${review.date}-${i}`} review={review} />) : <div className="empty"><h2>No reviews found.</h2><p>Search for a product to populate the library.</p></div>}</div></main> }
